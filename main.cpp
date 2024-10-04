@@ -1,5 +1,5 @@
-#import <list>
-#import <iostream>
+#include <list>
+#include <iostream>
 
 int main(int argc, char* argv) {
     std::list<int> intList;
@@ -7,7 +7,7 @@ int main(int argc, char* argv) {
         intList.push_back(argv[i]);
     }
 
-    for (std::list<int>::const_iterator itr; itr != intList.end(); itr++) {
+    for (std::list<int>::reverse_iterator itr = intList.rbegin(); itr != intList.rend(); itr++) {
         std::cout << *itr << std::endl;
     }
 }
